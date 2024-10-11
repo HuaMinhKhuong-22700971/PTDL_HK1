@@ -1,6 +1,7 @@
 import re
 import scrapy
 
+
 class MyscraperSpider(scrapy.Spider):
     name = "myscraper"
     allowed_domains = ["batdongsan.vn"]
