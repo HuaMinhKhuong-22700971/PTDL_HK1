@@ -1,5 +1,4 @@
 # Define your item pipelines here
-#
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 import scrapy
@@ -17,10 +16,10 @@ class MongoDBUnitopPipeline:
 
     def __init__(self):
 
-        # econnect = str(os.environ['Mongo_HOST']) 
-        # self.client = pymongo.MongoClient('mongodb://'+econnect+':27017')
+        econnect = str(os.environ['Mongo_HOST']) 
+        self.client = pymongo.MongoClient('mongodb://'+econnect+':27017')
 
-        self.client = pymongo.MongoClient('mongodb://localhost:27017')
+        # self.client = pymongo.MongoClient('mongodb://localhost:27017')
 
         self.db = self.client['db_BDS'] #Database      
         pass
