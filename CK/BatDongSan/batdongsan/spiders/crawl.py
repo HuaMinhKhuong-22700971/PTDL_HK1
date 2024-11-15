@@ -4,7 +4,7 @@ import re
 class MyscraperSpider(scrapy.Spider):
     name = "myscraper"
     allowed_domains = ["batdongsan.vn"]
-    start_urls = [f'https://batdongsan.vn/ban-nha/p{i}' for i in range(1, 5)]
+    start_urls = [f'https://batdongsan.vn/ban-nha/p{i}' for i in range(1, 43)]
 
     def parse(self, response):
         # Lấy dữ liệu bất động sản từ trang hiện tại
